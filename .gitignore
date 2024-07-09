@@ -1,0 +1,7 @@
+benchmark/*/*.exe
+benchmark/*/*.txt
+benchmark/test/
+
+*.log
+
+__pycache__
