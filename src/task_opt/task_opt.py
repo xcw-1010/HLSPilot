@@ -9,7 +9,7 @@ openai.api_key = """ OPENAI API KEY """
 os.environ["HTTP_PROXY"] = "http://127.0.0.1:33210"
 os.environ["HTTPS_PROXY"] = "http://127.0.0.1:33210"
 
-root_path = "D:/2023春/LLM/code/llm-opt"
+root_path = "D:/Code/HLSPilot"
 opt_options = ["ALLOCATION", "RESOURCE", "INLINE", 
                "FUNCTION_INSTANTIATE", "STREAM", "PIPELINE", 
                "OCCURRENCE", "UNROLL", "DEPENDENCE", 

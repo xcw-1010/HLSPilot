@@ -2,6 +2,7 @@ import os
 import re
 import time
 import openai
+from openai import OpenAI
 
 from prompt.prompt import SYSTEM_PROMPT, TASK_PIPELINE_PROMPT, TASK_PIPELINE_STRATEGY_PROMPT, TASK_PIPELINE_STRATEGY_PROMPT_4, TASK_PIPELINE_FOR_SINGLE_FUNCTION_PROMPT
 
@@ -10,8 +11,6 @@ benchmark_dir = "./benchmark"
 pipeline_log_path = "./log/pipeline"
 
 openai.api_key = """ OPENAI API KEY """
-os.environ["HTTP_PROXY"] = "http://127.0.0.1:33210"
-os.environ["HTTPS_PROXY"] = "http://127.0.0.1:33210"
 
 # split the whole code
 def gen_task_pipeline_prompt(algo_name, func_description):

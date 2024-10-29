@@ -4,19 +4,9 @@ import ast
 import time
 import openai
 
-from prompt.prompt_api_test import BASELINE_PROMPT, PIPELINE_PROMPT_1, PIPELINE_PROMPT_2, PIPELINE_PROMPT_3, TEST_PROMPT, OPT_CHOOSE_PROMPT_TEST2, DAG_GRAPH_PROMPT_TEST, TASK_PIPELINE_ADVICE_PROMPT, DETERMINE_CONTINUE_SPLIT_TEST, CONTINUE_SPLIT_TEST
+from openai import OpenAI
 
-from prompt.prompt_bfgs import TASK_PIPELINE_FOR_BFGS_1, TASK_PIPELINE_FOR_BFGS_2
-
-from task_opt import parse_opt_list
-from task_pipeline import *
-
-openai.api_key = """ OPENAI API KEY """
-# os.environ["HTTP_PROXY"] = "http://127.0.0.1:33210"
-# os.environ["HTTPS_PROXY"] = "http://127.0.0.1:33210"
-
-os.environ["HTTP_PROXY"] = "http://127.0.0.1:7890"
-os.environ["HTTPS_PROXY"] = "http://127.0.0.1:7890"
+os.environ["OPENAI_API_KEY"] = "xxx"
 
 """
 token数计算: https://tiktoken.aigc2d.com/
@@ -50,7 +40,12 @@ def extract_content_and_save(chat_completion, chat_file_path, code_file_path):
 if __name__ == '__main__':
     # api call: 
     # model_list = ["gpt-4-1106-preview", "gpt-4", "gpt-3.5-turbo-1106", "gpt-3.5-turbo"]
-    chat_completion = openai.ChatCompletion.create(
+    client = OpenAI(
+    # This is the default and can be omitted
+        api_key=os.environ.get("OPENAI_API_KEY"),
+    )
+
+    chat_completion = client.chat.completions.create(
         model="gpt-4-1106-preview", 
         messages=[{
           "role": "user", 
