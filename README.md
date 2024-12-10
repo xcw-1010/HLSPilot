@@ -4,6 +4,8 @@ HLSPilot is the first automatic HLS code generation and optimization framework f
 
 This framework investigates the use of LLM for HLS design strategy learning and tool learning, and build a complete hardware acceleration workflow ranging from runtime profiling, kernel identification, automatic HLS code generation, design space exploration, and HW/SW co-design on a hybrid CPU-FPGA computing architecture.
 
+![](src\pic\framework-v4.2.png)
+
 ## Prerequisites
 
 This project was tested on Xilinx Alveo U280 and Vitis HLS 2019.1 suite. The following python libraries are required: 
@@ -40,5 +42,15 @@ This project was tested on Xilinx Alveo U280 and Vitis HLS 2019.1 suite. The fol
    ./exec.sh run APP_NAME .cpp
    ```
 
-   
+## Citation
 
+If you find this work useful in your research, please consider citing our work:
+
+```
+@article{xiong2024hlspilot,
+  title={HLSPilot: LLM-based High-Level Synthesis},
+  author={Xiong, Chenwei and Liu, Cheng and Li, Huawei and Li, Xiaowei},
+  journal={arXiv preprint arXiv:2408.06810},
+  year={2024}
+}
+```
