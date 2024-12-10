@@ -4,7 +4,7 @@ HLSPilot is the first automatic HLS code generation and optimization framework f
 
 This framework investigates the use of LLM for HLS design strategy learning and tool learning, and build a complete hardware acceleration workflow ranging from runtime profiling, kernel identification, automatic HLS code generation, design space exploration, and HW/SW co-design on a hybrid CPU-FPGA computing architecture.
 
-![](src\pic\framework-v4.2.png)
+![](./src/pic/framework-v4.2.png)
 
 ## Prerequisites
 
