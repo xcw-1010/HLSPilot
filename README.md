@@ -25,12 +25,14 @@ This project was tested on Xilinx Alveo U280 and Vitis HLS 2019.1 suite. The fol
 2. Task pipeline: This step will split the kernel into multiple subtasks, allowing for pipeline execution between subtasks and improving program parallelism.
 
    ```shell
+   # update code_file_path in the script
    python3 src/task_pipeline/task_pipeline.py
    ```
 
 3. Task optimization: This step will optimize the subtask code by retrieving suitable pragma from the optimization strategy knowledge base and applying it to the code.
 
    ```shell
+   # update code_file_path in the script
    python3 src/task_opt/task_opt.py
    ```
 
